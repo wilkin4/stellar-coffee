@@ -12,7 +12,7 @@ namespace StellarCoffeeData.Repositories.Interfaces
         TEntity Get(Expression<Func<TEntity, bool>> predicate);
         IEnumerable<TEntity> GetAll(Expression<Func<TEntity, bool>> predicate);
         int Create(TEntity entity);
-        void Update();
+        void Update(TEntity entity);
         void Delete(int id);
     }
 }
