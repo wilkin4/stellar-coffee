@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StellaCoffeeDesktop", "StellaCoffeeDesktop\StellaCoffeeDesktop.csproj", "{3D68B314-5787-4241-813A-440607E38273}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StellarCoffeeData", "StellarCoffeeData\StellarCoffeeData.csproj", "{2E074BF8-A56C-4A49-9F5A-DF746AEE6F96}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D68B314-5787-4241-813A-440607E38273}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D68B314-5787-4241-813A-440607E38273}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D68B314-5787-4241-813A-440607E38273}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D68B314-5787-4241-813A-440607E38273}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E074BF8-A56C-4A49-9F5A-DF746AEE6F96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E074BF8-A56C-4A49-9F5A-DF746AEE6F96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E074BF8-A56C-4A49-9F5A-DF746AEE6F96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E074BF8-A56C-4A49-9F5A-DF746AEE6F96}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7AB7BE61-FBBF-49D3-BC21-FD6BB9F66DDD}
+	EndGlobalSection
+EndGlobal
