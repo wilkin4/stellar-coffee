@@ -12,6 +12,8 @@ namespace StellarCoffeeData.Migrations
             INSERT INTO [Users]
             VALUES
             (
+                'Wilkin',
+                'Vásquez',
                 'wilkin4',
                 '123456',
                 1

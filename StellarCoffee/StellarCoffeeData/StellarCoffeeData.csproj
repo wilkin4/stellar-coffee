@@ -49,11 +49,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\StellarCoffeeDbContext.cs" />
-    <Compile Include="Migrations\201902252202038_StellarCoffee.cs" />
-    <Compile Include="Migrations\201902252202038_StellarCoffee.Designer.cs">
-      <DependentUpon>201902252202038_StellarCoffee.cs</DependentUpon>
+    <Compile Include="Migrations\201902261355342_StellarCoffee.cs" />
+    <Compile Include="Migrations\201902261355342_StellarCoffee.Designer.cs">
+      <DependentUpon>201902261355342_StellarCoffee.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Repositories\Entities\UserRepository.cs" />
     <Compile Include="SQL\SqlStrings.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Product.cs" />
@@ -68,8 +69,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201902252202038_StellarCoffee.resx">
-      <DependentUpon>201902252202038_StellarCoffee.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201902261355342_StellarCoffee.resx">
+      <DependentUpon>201902261355342_StellarCoffee.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

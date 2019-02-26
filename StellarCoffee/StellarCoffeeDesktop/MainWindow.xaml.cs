@@ -27,5 +27,26 @@ namespace StellarCoffeeDesktop
         {
             InitializeComponent();
         }
+
+        private void LoginButtonClick(object sender, RoutedEventArgs e)
+        {
+            string username = Username.Text;
+            string password = Password.Password;
+
+            UserRepository userRepository = new UserRepository();
+
+            User user = userRepository.Login(username, password);
+
+            if (user == null)
+            {
+                MessageBox.Show("Usuario o contraseña incorrecta.");
+            }
+            else
+            {
+                HomeWindow homewindow = new HomeWindow(user);
+                homewindow.Show();
+                this.Close();
+            }
+        }
     }
 }
