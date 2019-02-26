@@ -7,7 +7,68 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
         Background="#444444">
-    <Grid>
-        
+    <Grid
+        Height="180"
+        Width="200"
+    >
+        <Label 
+            Grid.Column="0"
+            Grid.Row="0"
+            Padding="0"
+        >
+            Usuario
+        </Label>
+
+        <TextBox 
+            Grid.Column="0"
+            Grid.Row="1"
+            Height="30"
+            VerticalContentAlignment="Center"
+        />
+
+        <Label 
+            Grid.Column="0"
+            Grid.Row="2"
+            Padding="0"
+        >
+            Contraseña
+        </Label>
+
+        <PasswordBox 
+            Grid.Column="0"
+            Grid.Row="3"
+            Height="30"
+            VerticalContentAlignment="Center"
+        />
+
+        <Button 
+            Grid.Column="0"
+            Grid.Row="4"
+            Content="INGRESAR"
+            Height="35"
+            Margin="0 20 0 0"
+        />
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="auto"
+            />
+            
+            <RowDefinition/>
+            
+            <RowDefinition
+                Height="Auto"   
+            />
+            
+            <RowDefinition/>
+            
+            <RowDefinition
+                Height="auto"
+            />
+        </Grid.RowDefinitions>
     </Grid>
 </Window>
