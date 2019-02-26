@@ -25,26 +25,6 @@ namespace StellarCoffeeDesktop
     {
         public MainWindow()
         {
-            Product product = new Product();
-            product.Id = 3;
-            product.Name = "Super expresso";
-            product.Price = 100;
-            product.Status = true;
-
-            ProductRepostitory productRepostitory = new ProductRepostitory();
-
-            Expression<Func<Product, bool>> predicate = Product => Product.Id == 3 && Product.Status == true;
-
-            productRepostitory.Update(product);
-
-            //productRepostitory.Delete(2);
-
-            //productRepostitory.Create(product);
-
-            //Expression<Func<Product, bool>> predicate = Product => Product.Status == true;
-
-            //IEnumerable<Product> products = productRepostitory.GetAll(predicate);
-
             InitializeComponent();
         }
     }

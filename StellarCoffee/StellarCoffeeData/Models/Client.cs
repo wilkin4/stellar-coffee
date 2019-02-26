@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace StellarCoffeeData.Models
 {
-    public class Product
+    public class Client
     {
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }
-        public float Price { get; set; }
-        public float ITBIS { get; set; }
+        public string IdentityCardNumber { get; set; }
+        public string RNC { get; set; }
         public bool Status { get; set; }
     }
 }

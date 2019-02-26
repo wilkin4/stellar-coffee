@@ -13,10 +13,11 @@ namespace StellarCoffeeData.Context
     {
         public StellarCoffeeDbContext() : base("StellarCoffee")
         {
-            // Ensure DLL is copied.
-            //SqlProviderServices ensureDLLIsCopied = (SqlProviderServices.Instance);
+
         }
 
         public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<Client> Clients { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F126F3DE-7582-40D9-ADB9-A13F5E4B4958}</ProjectGuid>
+    <ProjectGuid>{68ED9B0B-849C-4F08-9697-D753D62ADE2C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>StellarCoffeeDesktop</RootNamespace>
     <AssemblyName>StellarCoffeeDesktop</AssemblyName>

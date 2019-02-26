@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2BC4F93F-7352-44B9-B76B-5CAEAB1CAD51}</ProjectGuid>
+    <ProjectGuid>{1FEB6753-D22C-42BD-9B91-8F6FAAE384AF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>StellarCoffeeData</RootNamespace>
@@ -49,12 +49,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\StellarCoffeeDbContext.cs" />
-    <Compile Include="Migrations\201902251537207_StellarCoffee.cs" />
-    <Compile Include="Migrations\201902251537207_StellarCoffee.Designer.cs">
-      <DependentUpon>201902251537207_StellarCoffee.cs</DependentUpon>
+    <Compile Include="Migrations\201902252202038_StellarCoffee.cs" />
+    <Compile Include="Migrations\201902252202038_StellarCoffee.Designer.cs">
+      <DependentUpon>201902252202038_StellarCoffee.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="SQL\SqlStrings.cs" />
+    <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Entities\BaseRepository.cs" />
     <Compile Include="Repositories\Entities\ProductRepostitory.cs" />
@@ -65,8 +68,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201902251537207_StellarCoffee.resx">
-      <DependentUpon>201902251537207_StellarCoffee.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201902252202038_StellarCoffee.resx">
+      <DependentUpon>201902252202038_StellarCoffee.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
