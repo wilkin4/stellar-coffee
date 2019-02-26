@@ -4,6 +4,23 @@
              xmlns:local="clr-namespace:StellarCoffeeDesktop"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        
+        <!--==========-->
+        <!--HOME-->
+        <!--==========-->
+        
+        <!--Button-->
+
+        <Style
+            x:Key="HomeMenuButton"
+            TargetType="{x:Type Button}"
+        >
+            <Setter Property="HorizontalContentAlignment" Value="Left"></Setter>
+            <Setter Property="Padding" Value="10 0 0 0"></Setter>
+            <Setter Property="Background" Value="#222222"></Setter>
+            <Setter Property="Foreground" Value="#ffffff"></Setter>
+            <Setter Property="BorderThickness" Value="0"></Setter>
+            <Setter Property="Height" Value="35"></Setter>
+        </Style>
     </Application.Resources>
 </Application>

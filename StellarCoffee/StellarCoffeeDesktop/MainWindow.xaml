@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:StellarCoffeeDesktop"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="300"
-        Background="#444444"
         WindowStartupLocation="CenterScreen"
+        Background="#444444"
 >
     <Grid
         Height="180"

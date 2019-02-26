@@ -23,6 +23,23 @@ namespace StellarCoffeeDesktop
         public HomeWindow(User user)
         {
             InitializeComponent();
+
+            UserName.Text = $"{user.Name} {user.LastName}";
+        }
+
+        private void ClientsButtonClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ProductsButtonClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ConfigurationsButtonClick(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

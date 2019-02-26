@@ -5,11 +5,78 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StellarCoffeeDesktop"
         mc:Ignorable="d"
-        Title="HomeWindow" Height="450" Width="800"
+        Title="HomeWindow" Height="600" Width="1000"
         WindowStartupLocation="CenterScreen"
+        Background="#444444"
 >
-        
+
     <Grid>
-        
+        <DockPanel LastChildFill="True">
+            <TextBlock
+                DockPanel.Dock="Top"
+                Name="UserName"
+                Background="#333333"
+                Height="25"
+                Foreground="#ffffff"
+                FontSize="14"
+                TextAlignment="Right"
+                Padding="0 2 10 0"
+                FontWeight="Light"
+            >
+                Texto prueba
+            </TextBlock>
+
+            <StackPanel
+                DockPanel.Dock="Bottom"
+                Background="#111111"
+                Height="10"
+            >
+
+            </StackPanel>
+
+            <Grid>
+                <StackPanel
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    DockPanel.Dock="Left"
+                    Background="#222222"
+                >
+                    <Button 
+                        Style="{StaticResource HomeMenuButton}"
+                        Content="CLIENTES"
+                        Click="ClientsButtonClick"
+                    />
+
+                    <Button 
+                        Style="{StaticResource HomeMenuButton}"
+                        Content="PRODUCTOS"
+                        Click="ProductsButtonClick"
+                    />
+
+                    <Button 
+                        Style="{StaticResource HomeMenuButton}"
+                        Content="CONFIGURACIONES"
+                        Click="ConfigurationsButtonClick"
+                    />
+                </StackPanel>
+
+                <StackPanel
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    DockPanel.Dock="Right"
+                >
+
+                </StackPanel>
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="8*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+            </Grid>
+        </DockPanel>
     </Grid>
 </Window>
