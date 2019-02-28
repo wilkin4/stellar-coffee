@@ -29,7 +29,8 @@ namespace StellarCoffeeDesktop
 
         private void ClientsButtonClick(object sender, RoutedEventArgs e)
         {
-
+            ClientsForm clientsForm = new ClientsForm();
+            clientsForm.ShowDialog();
         }
 
         private void ProductsButtonClick(object sender, RoutedEventArgs e)

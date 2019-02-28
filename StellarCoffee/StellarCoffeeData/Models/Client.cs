@@ -14,6 +14,7 @@ namespace StellarCoffeeData.Models
         public string Name { get; set; }
         public string IdentityCardNumber { get; set; }
         public string RNC { get; set; }
-        public bool Status { get; set; }
+        public string Address { get; set; }
+        public bool Status { get; set; } = true;
     }
 }

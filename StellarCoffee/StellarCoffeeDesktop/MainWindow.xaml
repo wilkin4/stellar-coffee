@@ -5,89 +5,91 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StellarCoffeeDesktop"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="300"
+        Title="MainWindow" 
+        Height="450" 
+        Width="300"
         WindowStartupLocation="CenterScreen"
         Background="#333333"
 >
-    <Grid
-        Height="180"
-        Width="200"
-    >
-        <Label 
+    <Grid>
+        <ItemsControl
             Grid.Column="0"
             Grid.Row="0"
-            Padding="0"
-            Foreground="#888888"
+            Background="#252525" 
+            Padding="20"
         >
-            Usuario
-        </Label>
-
-        <TextBox 
-            Name="Username"
+            <Image 
+                Source="Images/StellarCoffee.png" 
+                VerticalAlignment="Center" 
+                Height="100"
+            />
+        </ItemsControl>
+        
+        <StackPanel
             Grid.Column="0"
             Grid.Row="1"
-            Height="30"
-            VerticalContentAlignment="Center"
-            Background="#444444"
-            BorderThickness="0"
-            BorderBrush="red"
-            Padding="5 0 5 0"
-            Foreground="#ffffff"
-        />
-
-        <Label 
-            Grid.Column="0"
-            Grid.Row="2"
-            Padding="0"
-            Foreground="#888888"
         >
-            Contraseña
-        </Label>
+            <ItemsControl 
+                Padding="30 0 30 0"
+                Margin="0 30 0 0"
+            >
+                <Label 
+                    Padding="0"
+                    Foreground="#888888"
+                    Margin="0 0 0 5"
+                >
+                    Usuario
+                </Label>
 
-        <PasswordBox 
-            Name="Password"
-            Grid.Column="0"
-            Grid.Row="3"
-            Height="30"
-            VerticalContentAlignment="Center"
-            Background="#444444"
-            BorderThickness="0"
-            Padding="5 0 5 0"
-            Foreground="#ffffff"
-        />
+                <TextBox 
+                    Name="Username"
+                    Height="30"
+                    VerticalContentAlignment="Center"
+                    Background="#444444"
+                    BorderThickness="0"
+                    BorderBrush="red"
+                    Padding="5 0 5 0"
+                    Foreground="#ffffff"
+                    Margin="0 0 0 15"
+                />
 
-        <Button 
-            Grid.Column="0"
-            Grid.Row="4"
-            Content="INGRESAR"
-            Height="35"
-            Margin="0 20 0 0"
-            Click="LoginButtonClick"
-            BorderThickness="0"
-            Background="#02a7e5"
-            Foreground="#ffffff"
-        />
+                <Label 
+                    Padding="0"
+                    Foreground="#888888"
+                    Margin="0 0 0 5"
+                >
+                    Contraseña
+                </Label>
+
+                <PasswordBox 
+                    Name="Password"
+                    Height="30"
+                    VerticalContentAlignment="Center"
+                    Background="#444444"
+                    BorderThickness="0"
+                    Padding="5 0 5 0"
+                    Foreground="#ffffff"
+                />
+
+                <Button 
+                    Content="INGRESAR"
+                    Height="35"
+                    Margin="0 30 0 0"
+                    Click="LoginButtonClick"
+                    BorderThickness="0"
+                    Foreground="#ffffff"
+                    Style="{StaticResource LoginButton}" 
+                />
+            </ItemsControl>
+        </StackPanel>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition
-                Height="auto"
-            />
-
+            <RowDefinition Height="auto" />
             <RowDefinition/>
-
-            <RowDefinition
-                Height="Auto"   
-            />
-
-            <RowDefinition/>
-
-            <RowDefinition
-                Height="auto"
-            />
         </Grid.RowDefinitions>
     </Grid>
 </Window>
