@@ -28,7 +28,7 @@
 
             <StackPanel
                 DockPanel.Dock="Bottom"
-                Background="#111111"
+                Background="#b16801"
                 Height="10"
             >
 

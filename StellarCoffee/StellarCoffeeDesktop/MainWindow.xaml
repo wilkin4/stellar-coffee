@@ -5,12 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StellarCoffeeDesktop"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="300"
+        Title="MainWindow" 
+        Height="450" 
+        Width="300"
         WindowStartupLocation="CenterScreen"
         Background="#333333"
 >
     <Grid>
         <ItemsControl
+            Grid.Column="0"
+            Grid.Row="0"
             Background="#252525" 
             Padding="20"
         >
@@ -46,7 +50,6 @@
                     BorderBrush="red"
                     Padding="5 0 5 0"
                     Foreground="#ffffff"
-                    
                     Margin="0 0 0 15"
                 />
 

@@ -14,6 +14,6 @@ namespace StellarCoffeeData.Models
         public string Name { get; set; }
         public float Price { get; set; }
         public float ITBIS { get; set; }
-        public bool Status { get; set; }
+        public bool Status { get; set; } = true;
     }
 }
