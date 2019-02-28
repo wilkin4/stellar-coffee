@@ -74,8 +74,8 @@
                     Margin="0 30 0 0"
                     Click="LoginButtonClick"
                     BorderThickness="0"
-                    Background="#02a7e5"
                     Foreground="#ffffff"
+                    Style="{StaticResource LoginButton}" 
                 />
             </ItemsControl>
         </StackPanel>
