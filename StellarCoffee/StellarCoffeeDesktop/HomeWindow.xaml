@@ -108,14 +108,85 @@
                 <StackPanel
                     Grid.Column="1"
                     Grid.Row="0"
+                    DockPanel.Dock="Left"
+                    Background="#222222"
+                >
+                    <Button 
+                        Style="{StaticResource HomeMenuButton}"
+                        Click="ClientsButtonClick"
+                    >
+                        <StackPanel
+                            Orientation="Horizontal"
+                        >
+                            <Image 
+                                Source="Images/plus.png" 
+                                Height="12"
+                                Width="12"
+                            />
+
+                            <TextBlock
+                                Margin="5 0 0 0"
+                            >
+                                Nuevo cliente
+                            </TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <Button 
+                        Style="{StaticResource HomeMenuButton}"
+                        Click="ProductsButtonClick"
+                    >
+                        <StackPanel
+                            Orientation="Horizontal"
+                        >
+                            <Image 
+                                Source="Images/plus.png" 
+                                Height="12"
+                                Width="12"
+                            />
+
+                            <TextBlock
+                                Margin="5 0 0 0"
+                            >
+                                Nuevo producto
+                            </TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <Button 
+                        Style="{StaticResource HomeMenuButton}"
+                        Click="ConfigurationsButtonClick"
+                    >
+                        <StackPanel
+                            Orientation="Horizontal"
+                        >
+                            <Image 
+                                Source="Images/configuration.png" 
+                                Height="12"
+                                Width="12"
+                            />
+
+                            <TextBlock
+                                Margin="5 0 0 0"
+                            >
+                                Configuraciones
+                            </TextBlock>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+
+                <StackPanel
+                    Grid.Column="1"
+                    Grid.Row="0"
                     DockPanel.Dock="Right"
                 >
-
+                   
                 </StackPanel>
-                
+
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="8*"/>
+                    <ColumnDefinition Width="3.3*"/>
+                    <ColumnDefinition Width="3.3*"/>
+                    <ColumnDefinition Width="3.3*"/>
                 </Grid.ColumnDefinitions>
 
                 <Grid.RowDefinitions>
