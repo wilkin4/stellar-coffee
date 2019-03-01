@@ -18,6 +18,7 @@ namespace StellarCoffeeDesktop
     /// <summary>
     /// Interaction logic for HomeWindow.xaml
     /// </summary>
+    /// 
     public partial class HomeWindow : Window
     {
         public HomeWindow(User user)
@@ -35,7 +36,8 @@ namespace StellarCoffeeDesktop
 
         private void ProductsButtonClick(object sender, RoutedEventArgs e)
         {
-
+            ProductsForm productsForm = new ProductsForm();
+            productsForm.ShowDialog();
         }
 
         private void ConfigurationsButtonClick(object sender, RoutedEventArgs e)
