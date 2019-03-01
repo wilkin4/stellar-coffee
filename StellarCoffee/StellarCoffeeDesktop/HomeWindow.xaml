@@ -43,19 +43,19 @@
                 >
                     <Button 
                         Style="{StaticResource HomeMenuButton}"
-                        Content="CLIENTES"
+                        Content="Nuevo cliente"
                         Click="ClientsButtonClick"
                     />
 
                     <Button 
                         Style="{StaticResource HomeMenuButton}"
-                        Content="PRODUCTOS"
+                        Content="Nuevo producto"
                         Click="ProductsButtonClick"
                     />
 
                     <Button 
                         Style="{StaticResource HomeMenuButton}"
-                        Content="CONFIGURACIONES"
+                        Content="Configuraciones"
                         Click="ConfigurationsButtonClick"
                     />
                 </StackPanel>
