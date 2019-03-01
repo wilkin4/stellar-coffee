@@ -9,7 +9,8 @@
         Height="490" 
         Width="300"
         WindowStartupLocation="CenterScreen"
-        Background="#333333">
+        Background="#333333"
+>
     <Grid>
 
         <ItemsControl
