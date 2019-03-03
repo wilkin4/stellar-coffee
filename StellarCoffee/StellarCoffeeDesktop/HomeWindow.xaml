@@ -12,6 +12,11 @@
 
     <Grid>
         <DockPanel LastChildFill="True">
+            
+            <!--==========-->
+            <!--TOP-->
+            <!--==========-->
+
             <TextBlock
                 DockPanel.Dock="Top"
                 Name="UserName"
@@ -35,6 +40,11 @@
             </StackPanel>
 
             <Grid>
+
+                <!--==========-->
+                <!--LEFT 1-->
+                <!--==========-->
+                
                 <StackPanel
                     Grid.Column="0"
                     Grid.Row="0"
@@ -105,92 +115,207 @@
                     </Button>
                 </StackPanel>
 
+                <!--==========-->
+                <!--LEFT 2-->
+                <!--==========-->
+
                 <StackPanel
                     Grid.Column="1"
                     Grid.Row="0"
                     DockPanel.Dock="Left"
-                    Background="#222222"
                 >
-                    <Button 
-                        Style="{StaticResource HomeMenuButton}"
-                        Click="ClientsButtonClick"
+                    <Grid
+                        Height="{Binding Path=ActualHeight, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}}}"
                     >
-                        <StackPanel
-                            Orientation="Horizontal"
+                        <ItemsControl
+                            Grid.Column="0"
+                            Grid.Row="0"
                         >
-                            <Image 
-                                Source="Images/plus.png" 
-                                Height="12"
-                                Width="12"
-                            />
-
-                            <TextBlock
-                                Margin="5 0 0 0"
+                            <ScrollViewer
+                                Height="{Binding Path=ActualHeight, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ItemsControl}}}"
+                                Background="#383838"
                             >
-                                Nuevo cliente
-                            </TextBlock>
-                        </StackPanel>
-                    </Button>
+                                <StackPanel
+                                 >
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client
+                                    </TextBlock>
+                                    <TextBlock>
+                                        Client rrrr
+                                    </TextBlock>
+                                </StackPanel>
+                                
+                            </ScrollViewer>
+                        </ItemsControl>
 
-                    <Button 
-                        Style="{StaticResource HomeMenuButton}"
-                        Click="ProductsButtonClick"
-                    >
-                        <StackPanel
-                            Orientation="Horizontal"
+                        <ItemsControl
+                            Grid.Column="0"
+                            Grid.Row="1"  
+                            Padding="20"
                         >
-                            <Image 
-                                Source="Images/plus.png" 
-                                Height="12"
-                                Width="12"
-                            />
-
-                            <TextBlock
-                                Margin="5 0 0 0"
+                            <StackPanel
+                                Orientation="Horizontal"
                             >
-                                Nuevo producto
-                            </TextBlock>
-                        </StackPanel>
-                    </Button>
+                                <Button
+                                    Content="INGRESAR"
+                                    Height="35"
+                                    BorderThickness="0"
+                                    Foreground="#ffffff"
+                                    Style="{StaticResource LoginButton}"    
+                                />
 
-                    <Button 
-                        Style="{StaticResource HomeMenuButton}"
-                        Click="ConfigurationsButtonClick"
-                    >
-                        <StackPanel
-                            Orientation="Horizontal"
-                        >
-                            <Image 
-                                Source="Images/configuration.png" 
-                                Height="12"
-                                Width="12"
-                            />
+                                <Button
+                                    Content="INGRESAR"
+                                    Height="35"
+                                    BorderThickness="0"
+                                    Foreground="#ffffff"
+                                    Style="{StaticResource LoginButton}"     
+                                />
+                            </StackPanel>
+                        </ItemsControl>
 
-                            <TextBlock
-                                Margin="5 0 0 0"
-                            >
-                                Configuraciones
-                            </TextBlock>
-                        </StackPanel>
-                    </Button>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                    </Grid>
                 </StackPanel>
 
+                <!--==========-->
+                <!--RIGHT-->
+                <!--==========-->
+
                 <StackPanel
-                    Grid.Column="1"
+                    Grid.Column="0"
                     Grid.Row="0"
                     DockPanel.Dock="Right"
                 >
-                   
+                    
                 </StackPanel>
 
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="3.3*"/>
-                    <ColumnDefinition Width="3.3*"/>
-                    <ColumnDefinition Width="3.3*"/>
+                    <ColumnDefinition Width="1.5*"/>
+                    <ColumnDefinition Width="4.25*"/>
+                    <ColumnDefinition Width="4.25*"/>
                 </Grid.ColumnDefinitions>
 
                 <Grid.RowDefinitions>
-                    <RowDefinition/>
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
             </Grid>
         </DockPanel>
