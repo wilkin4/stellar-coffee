@@ -126,7 +126,79 @@
                     Grid.Row="0"
                     DockPanel.Dock="Left"
                 >
+                    <Grid
+                        Height="{Binding Path=ActualHeight, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}}}"    
+                    >
+                        <StackPanel
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            Orientation="Horizontal"  
+                            Background="#3c3c3c"
+                        >
+                            <ItemsControl
+                                Width="{Binding Path=ActualWidth, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type StackPanel}}}"    
+                                Padding="20"
+                            >
+                                <Grid
+                                >
+                                    <TextBox
+                                        Grid.Column="0"
+                                        Grid.Row="0"
+                                        Height="30"
+                                        VerticalContentAlignment="Center"
+                                        Background="#666666"
+                                        BorderThickness="0"
+                                        BorderBrush="red"
+                                        Padding="5 0 5 0"
+                                        Foreground="#ffffff"
+                                    />
 
+                                    <Button 
+                                        Grid.Column="1"
+                                        Grid.Row="0"
+                                        Content="BUSCAR"
+                                        Height="30"
+                                        BorderThickness="0"
+                                        Foreground="#ffffff"
+                                        Click="SearchButtonClick"
+                                        Style="{StaticResource LoginButton}" 
+                                    />
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="7*" />
+                                        <ColumnDefinition Width="3*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                </Grid>
+                            </ItemsControl>
+                        </StackPanel>
+
+                        <ListBox
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            ScrollViewer.VerticalScrollBarVisibility="Visible"
+                            Background="#333333"
+                            Foreground="#888888"
+                            FontWeight="Bold"
+                            FontSize="12"
+                            Padding="5"
+                            BorderThickness="0"
+                        >
+
+                        </ListBox>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                    </Grid>
                 </StackPanel>
 
                 <!--==========-->
@@ -137,7 +209,7 @@
                     Grid.Column="2"
                     Grid.Row="0"
                     DockPanel.Dock="Right"
-                    Background="#222222"
+                    Background="#292929"
                 >
                     <Grid
                         Height="{Binding Path=ActualHeight, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}}}"    
@@ -156,10 +228,10 @@
                                     <TextBox
                                         Grid.Column="0"
                                         Grid.Row="0"
-                                        Name="StringSearch"
                                         Height="30"
+                                        Name="StringSearch"
                                         VerticalContentAlignment="Center"
-                                        Background="#444444"
+                                        Background="#666666"
                                         BorderThickness="0"
                                         BorderBrush="red"
                                         Padding="5 0 5 0"
