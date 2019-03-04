@@ -25,9 +25,9 @@
                 Background="#333333"
                 Height="25"
                 Foreground="#ffffff"
-                FontSize="14"
+                FontSize="12"
                 TextAlignment="Right"
-                Padding="0 2 10 0"
+                Padding="0 3 10 0"
                 FontWeight="Light"
             >
                 Texto prueba
@@ -132,9 +132,29 @@
                         <StackPanel
                             Grid.Column="0"
                             Grid.Row="0"
-                            Orientation="Horizontal"  
+                            Orientation="Vertical"  
                             Background="#3c3c3c"
                         >
+                            <ItemsControl
+                                Grid.Column="0"
+                                Grid.Row="0"
+                                Background="#252525" 
+                                Padding="15"
+                                Foreground="#ffffff"
+            
+                            >
+                                <Label 
+                                    Padding="0"
+                                    Foreground="#888888"
+                                    Margin="0 0 0 5"
+                                    HorizontalContentAlignment="Center"
+                                    FontWeight="Bold"
+                                    FontSize="16"
+                                >
+                                    Productos
+                                </Label>
+                            </ItemsControl>
+
                             <ItemsControl
                                 Width="{Binding Path=ActualWidth, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type StackPanel}}}"    
                                 Padding="20"
@@ -217,8 +237,28 @@
                         <StackPanel
                             Grid.Column="0"
                             Grid.Row="0"
-                            Orientation="Horizontal"  
+                            Orientation="Vertical"  
                         >
+                            <ItemsControl
+                                Grid.Column="0"
+                                Grid.Row="0"
+                                Background="#252525" 
+                                Padding="15"
+                                Foreground="#ffffff"
+            
+                            >
+                                <Label 
+                                    Padding="0"
+                                    Foreground="#888888"
+                                    Margin="0 0 0 5"
+                                    HorizontalContentAlignment="Center"
+                                    FontWeight="Bold"
+                                    FontSize="16"
+                                >
+                                    Clientes
+                                </Label>
+                            </ItemsControl>
+                            
                             <ItemsControl
                                 Width="{Binding Path=ActualWidth, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type StackPanel}}}"    
                                 Padding="20"
