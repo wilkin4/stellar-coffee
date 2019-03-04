@@ -1,4 +1,5 @@
 ﻿using StellarCoffeeData.Models;
+using StellarCoffeeData.Repositories.Entities;
 using StellarCoffeeDesktop.Forms;
 using System;
 using System.Collections.Generic;
@@ -27,6 +28,8 @@ namespace StellarCoffeeDesktop
             InitializeComponent();
 
             UserName.Text = $"{user.Name} {user.LastName}";
+
+            SearchClients("");
         }
 
         private void ClientsButtonClick(object sender, RoutedEventArgs e)
@@ -44,6 +47,25 @@ namespace StellarCoffeeDesktop
         private void ConfigurationsButtonClick(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void SearchButtonClick(object sender, RoutedEventArgs e)
+        {
+            SearchClients(StringSearch.Text);
+        }
+
+        private void SearchClients(string stringSearch)
+        {
+            ClientRepository clientRepository = new ClientRepository();
+
+            IEnumerable<Client> clients = clientRepository.Search(stringSearch);
+
+            Clients.Items.Clear();
+
+            foreach (Client client in clients)
+            {
+                Clients.Items.Add(client.Name);
+            }
         }
     }
 }

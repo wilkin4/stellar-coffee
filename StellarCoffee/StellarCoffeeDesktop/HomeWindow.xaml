@@ -154,7 +154,7 @@
                                     <TextBox
                                         Grid.Column="0"
                                         Grid.Row="0"
-                                        Name="Address"
+                                        Name="StringSearch"
                                         Height="30"
                                         VerticalContentAlignment="Center"
                                         Background="#444444"
@@ -171,6 +171,7 @@
                                         Height="30"
                                         BorderThickness="0"
                                         Foreground="#ffffff"
+                                        Click="SearchButtonClick"
                                         Style="{StaticResource LoginButton}" 
                                     />
 
@@ -187,6 +188,7 @@
                         </StackPanel>
 
                         <ListBox
+                            Name="Clients"
                             Grid.Column="0"
                             Grid.Row="1"
                             ScrollViewer.VerticalScrollBarVisibility="Visible"
@@ -197,12 +199,7 @@
                             Padding="5"
                             BorderThickness="0"
                         >
-                            <ListBoxItem>Client 1</ListBoxItem>
-                            <ListBoxItem>Client 2</ListBoxItem>
-                            <ListBoxItem>Client 3</ListBoxItem>
-                            <ListBoxItem>Client 4</ListBoxItem>
-                            <ListBoxItem>Client 5</ListBoxItem>
-                            <ListBoxItem>Client 6</ListBoxItem>
+                       
                         </ListBox>
                     
                         <Grid.ColumnDefinitions>
