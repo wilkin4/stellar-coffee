@@ -23,9 +23,13 @@ namespace StellarCoffeeDesktop
     /// 
     public partial class HomeWindow : Window
     {
+        private int _userId;
+
         public HomeWindow(User user)
         {
             InitializeComponent();
+
+            _userId = user.Id;
 
             UserName.Text = $"{user.Name} {user.LastName}";
 
@@ -46,7 +50,8 @@ namespace StellarCoffeeDesktop
 
         private void ConfigurationsButtonClick(object sender, RoutedEventArgs e)
         {
-
+            ConfigurationsForm configurationsForm = new ConfigurationsForm(_userId);
+            configurationsForm.ShowDialog();
         }
 
         private void SearchButtonClick(object sender, RoutedEventArgs e)
