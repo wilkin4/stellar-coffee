@@ -185,6 +185,7 @@
                                         Grid.Column="0"
                                         Grid.Row="0"
                                         Height="30"
+                                        Name="ProductStringSearch"
                                         VerticalContentAlignment="Center"
                                         Background="#666666"
                                         BorderThickness="0"
@@ -200,7 +201,7 @@
                                         Height="30"
                                         BorderThickness="0"
                                         Foreground="#ffffff"
-                                        Click="SearchButtonClick"
+                                        Click="SearchProductsButtonClick"
                                         Style="{StaticResource LoginButton}" 
                                     />
 
@@ -217,8 +218,10 @@
                         </StackPanel>
 
                         <ListBox
+                            Name="Products"
                             Grid.Column="0"
                             Grid.Row="1"
+                            SelectionMode="Multiple"
                             ScrollViewer.VerticalScrollBarVisibility="Visible"
                             Background="#333333"
                             Foreground="#888888"
@@ -274,7 +277,7 @@
                                     FontWeight="Bold"
                                     FontSize="16"
                                 >
-                                    Nuevo cliente
+                                    Clientes
                                 </Label>
                             </ItemsControl>
 
@@ -288,7 +291,7 @@
                                         Grid.Column="0"
                                         Grid.Row="0"
                                         Height="30"
-                                        Name="StringSearch"
+                                        Name="ClientStringSearch"
                                         VerticalContentAlignment="Center"
                                         Background="#666666"
                                         BorderThickness="0"
@@ -304,7 +307,7 @@
                                         Height="30"
                                         BorderThickness="0"
                                         Foreground="#ffffff"
-                                        Click="SearchButtonClick"
+                                        Click="SearchClientsButtonClick"
                                         Style="{StaticResource LoginButton}" 
                                     />
 

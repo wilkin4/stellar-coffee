@@ -33,6 +33,7 @@ namespace StellarCoffeeDesktop
 
             UserName.Text = $"{user.Name} {user.LastName}";
 
+            SearchProducts("");
             SearchClients("");
         }
 
@@ -54,9 +55,14 @@ namespace StellarCoffeeDesktop
             configurationsForm.ShowDialog();
         }
 
-        private void SearchButtonClick(object sender, RoutedEventArgs e)
+        private void SearchProductsButtonClick(object sender, RoutedEventArgs e)
         {
-            SearchClients(StringSearch.Text);
+            SearchProducts(ProductStringSearch.Text);
+        }
+
+        private void SearchClientsButtonClick(object sender, RoutedEventArgs e)
+        {
+            SearchClients(ClientStringSearch.Text);
         }
 
         private void SearchClients(string stringSearch)
@@ -70,6 +76,20 @@ namespace StellarCoffeeDesktop
             foreach (Client client in clients)
             {
                 Clients.Items.Add(client.Name);
+            }
+        }
+
+        private void SearchProducts(string stringSearch)
+        {
+            ProductRepostitory productRepostitory = new ProductRepostitory();
+
+            IEnumerable<Product> products = productRepostitory.Search(stringSearch);
+
+            Products.Items.Clear();
+
+            foreach (Product product in products)
+            {
+                Products.Items.Add($"{product.Name} - RD$ {product.Price}");
             }
         }
     }

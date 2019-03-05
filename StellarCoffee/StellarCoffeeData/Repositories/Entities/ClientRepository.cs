@@ -17,8 +17,7 @@ namespace StellarCoffeeData.Repositories.Entities
                 client.RNC.Contains(searchString) ||
                 client.Address.Contains(searchString)
             )
-            .OrderBy(client => client.Name)
-            .ToList();
+            .OrderBy(client => client.Name);
 
             return clients;
         }
