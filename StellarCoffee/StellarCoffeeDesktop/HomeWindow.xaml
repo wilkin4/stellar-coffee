@@ -54,6 +54,7 @@
                     Background="#222222"
                 >
                     <Button 
+                        Click="CreateOrderButtonClick"
                         Style="{StaticResource HomeMenuButton}"
                     >
                         <StackPanel

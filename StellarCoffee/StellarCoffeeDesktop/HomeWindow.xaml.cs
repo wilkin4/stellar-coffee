@@ -37,6 +37,11 @@ namespace StellarCoffeeDesktop
             SearchClients("");
         }
 
+        private void CreateOrderButtonClick(object sender, RoutedEventArgs e)
+        {
+            var products = Products.SelectedItems;
+        }
+
         private void ClientsButtonClick(object sender, RoutedEventArgs e)
         {
             ClientsForm clientsForm = new ClientsForm();
@@ -95,7 +100,7 @@ namespace StellarCoffeeDesktop
                 ListBoxItem listBoxItem = new ListBoxItem();
                 listBoxItem.Content = product.Name;
 
-                Clients.Items.Add(listBoxItem);
+                Products.Items.Add(listBoxItem);
             }
         }
     }
