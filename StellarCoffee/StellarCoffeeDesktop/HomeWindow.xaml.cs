@@ -75,7 +75,10 @@ namespace StellarCoffeeDesktop
 
             foreach (Client client in clients)
             {
-                Clients.Items.Add(client.Name);
+                ListBoxItem listBoxItem = new ListBoxItem();
+                listBoxItem.Content = client.Name;
+
+                Clients.Items.Add(listBoxItem);
             }
         }
 
@@ -89,7 +92,10 @@ namespace StellarCoffeeDesktop
 
             foreach (Product product in products)
             {
-                Products.Items.Add($"{product.Name} - RD$ {product.Price}");
+                ListBoxItem listBoxItem = new ListBoxItem();
+                listBoxItem.Content = product.Name;
+
+                Clients.Items.Add(listBoxItem);
             }
         }
     }

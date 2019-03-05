@@ -27,7 +27,7 @@
                 Foreground="#ffffff"
                 FontSize="12"
                 TextAlignment="Right"
-                Padding="0 3 10 0"
+                Padding="0 4 10 0"
                 FontWeight="Light"
             >
                 Texto prueba
