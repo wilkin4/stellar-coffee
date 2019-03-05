@@ -55,6 +55,26 @@
                 >
                     <Button 
                         Style="{StaticResource HomeMenuButton}"
+                    >
+                        <StackPanel
+                            Orientation="Horizontal"
+                        >
+                            <Image 
+                                Source="Images/shopping-list.png" 
+                                Height="12"
+                                Width="12"
+                            />
+
+                            <TextBlock
+                                Margin="5 0 0 0"
+                            >
+                                Crear pedido
+                            </TextBlock>
+                        </StackPanel>
+                    </Button>
+                    
+                    <Button 
+                        Style="{StaticResource HomeMenuButton}"
                         Click="ClientsButtonClick"
                     >
                         <StackPanel
@@ -132,9 +152,29 @@
                         <StackPanel
                             Grid.Column="0"
                             Grid.Row="0"
-                            Orientation="Horizontal"  
+                            Orientation="Vertical"  
                             Background="#3c3c3c"
                         >
+                            <ItemsControl
+                                Grid.Column="0"
+                                Grid.Row="0"
+                                Background="#252525" 
+                                Padding="15"
+                                Foreground="#ffffff"
+                            >
+                                <Label 
+                                    Padding="0"
+                                    Foreground="#888888"
+                                    Margin="0 0 0 5"
+                                    HorizontalContentAlignment="Center"
+                                    FontWeight="Bold"
+                                    FontSize="16"
+                                >
+                                    Productos
+                                </Label>
+                            </ItemsControl>
+
+
                             <ItemsControl
                                 Width="{Binding Path=ActualWidth, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type StackPanel}}}"    
                                 Padding="20"
@@ -217,8 +257,27 @@
                         <StackPanel
                             Grid.Column="0"
                             Grid.Row="0"
-                            Orientation="Horizontal"  
+                            Orientation="Vertical"  
                         >
+                            <ItemsControl
+                                Grid.Column="0"
+                                Grid.Row="0"
+                                Background="#252525" 
+                                Padding="15"
+                                Foreground="#ffffff"
+                            >
+                                <Label 
+                                    Padding="0"
+                                    Foreground="#888888"
+                                    Margin="0 0 0 5"
+                                    HorizontalContentAlignment="Center"
+                                    FontWeight="Bold"
+                                    FontSize="16"
+                                >
+                                    Nuevo cliente
+                                </Label>
+                            </ItemsControl>
+
                             <ItemsControl
                                 Width="{Binding Path=ActualWidth, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type StackPanel}}}"    
                                 Padding="20"
