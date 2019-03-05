@@ -55,6 +55,26 @@
                 >
                     <Button 
                         Style="{StaticResource HomeMenuButton}"
+                    >
+                        <StackPanel
+                            Orientation="Horizontal"
+                        >
+                            <Image 
+                                Source="Images/shopping-list.png" 
+                                Height="12"
+                                Width="12"
+                            />
+
+                            <TextBlock
+                                Margin="5 0 0 0"
+                            >
+                                Crear pedido
+                            </TextBlock>
+                        </StackPanel>
+                    </Button>
+                    
+                    <Button 
+                        Style="{StaticResource HomeMenuButton}"
                         Click="ClientsButtonClick"
                     >
                         <StackPanel
@@ -141,7 +161,6 @@
                                 Background="#252525" 
                                 Padding="15"
                                 Foreground="#ffffff"
-            
                             >
                                 <Label 
                                     Padding="0"
@@ -155,6 +174,7 @@
                                 </Label>
                             </ItemsControl>
 
+
                             <ItemsControl
                                 Width="{Binding Path=ActualWidth, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type StackPanel}}}"    
                                 Padding="20"
@@ -165,6 +185,7 @@
                                         Grid.Column="0"
                                         Grid.Row="0"
                                         Height="30"
+                                        Name="ProductStringSearch"
                                         VerticalContentAlignment="Center"
                                         Background="#666666"
                                         BorderThickness="0"
@@ -180,7 +201,7 @@
                                         Height="30"
                                         BorderThickness="0"
                                         Foreground="#ffffff"
-                                        Click="SearchButtonClick"
+                                        Click="SearchProductsButtonClick"
                                         Style="{StaticResource LoginButton}" 
                                     />
 
@@ -197,8 +218,10 @@
                         </StackPanel>
 
                         <ListBox
+                            Name="Products"
                             Grid.Column="0"
                             Grid.Row="1"
+                            SelectionMode="Multiple"
                             ScrollViewer.VerticalScrollBarVisibility="Visible"
                             Background="#333333"
                             Foreground="#888888"
@@ -245,7 +268,6 @@
                                 Background="#252525" 
                                 Padding="15"
                                 Foreground="#ffffff"
-            
                             >
                                 <Label 
                                     Padding="0"
@@ -258,7 +280,7 @@
                                     Clientes
                                 </Label>
                             </ItemsControl>
-                            
+
                             <ItemsControl
                                 Width="{Binding Path=ActualWidth, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type StackPanel}}}"    
                                 Padding="20"
@@ -269,7 +291,7 @@
                                         Grid.Column="0"
                                         Grid.Row="0"
                                         Height="30"
-                                        Name="StringSearch"
+                                        Name="ClientStringSearch"
                                         VerticalContentAlignment="Center"
                                         Background="#666666"
                                         BorderThickness="0"
@@ -285,7 +307,7 @@
                                         Height="30"
                                         BorderThickness="0"
                                         Foreground="#ffffff"
-                                        Click="SearchButtonClick"
+                                        Click="SearchClientsButtonClick"
                                         Style="{StaticResource LoginButton}" 
                                     />
 

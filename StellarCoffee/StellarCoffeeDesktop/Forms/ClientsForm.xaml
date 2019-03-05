@@ -19,7 +19,6 @@
             Background="#252525" 
             Padding="15"
             Foreground="#ffffff"
-            
         >
             <Label 
                 Padding="0"
