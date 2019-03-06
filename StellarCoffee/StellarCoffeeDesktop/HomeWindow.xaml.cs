@@ -39,7 +39,22 @@ namespace StellarCoffeeDesktop
 
         private void CreateOrderButtonClick(object sender, RoutedEventArgs e)
         {
-            var products = Products.SelectedItems;
+            var selectedItems = Products.SelectedItems;
+
+            ListBoxItem selectedClient = Clients.SelectedItem as ListBoxItem;
+            Client client = selectedClient.DataContext as Client;
+            List<Product> products = new List<Product>();
+
+            foreach (ListBoxItem item in selectedItems)
+            {
+                Product product = item.DataContext as Product;
+
+                products.Add(product);
+            }
+
+            OrdersForm ordersForm = new OrdersForm(client, products);
+
+            ordersForm.ShowDialog();
         }
 
         private void ClientsButtonClick(object sender, RoutedEventArgs e)
@@ -82,6 +97,7 @@ namespace StellarCoffeeDesktop
             {
                 ListBoxItem listBoxItem = new ListBoxItem();
                 listBoxItem.Content = client.Name;
+                listBoxItem.DataContext = client;
 
                 Clients.Items.Add(listBoxItem);
             }
@@ -98,7 +114,8 @@ namespace StellarCoffeeDesktop
             foreach (Product product in products)
             {
                 ListBoxItem listBoxItem = new ListBoxItem();
-                listBoxItem.Content = product.Name;
+                listBoxItem.Content = $"{product.Name} - RD$ {product.Price}";
+                listBoxItem.DataContext = product;
 
                 Products.Items.Add(listBoxItem);
             }
