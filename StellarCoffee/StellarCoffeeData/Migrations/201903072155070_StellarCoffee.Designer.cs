@@ -7,13 +7,13 @@ namespace StellarCoffeeData.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class AddressFieldInClients : IMigrationMetadata
+    public sealed partial class StellarCoffee : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddressFieldInClients));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(StellarCoffee));
         
         string IMigrationMetadata.Id
         {
-            get { return "201902282221068_AddressFieldInClients"; }
+            get { return "201903072155070_StellarCoffee"; }
         }
         
         string IMigrationMetadata.Source

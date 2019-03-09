@@ -49,13 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\StellarCoffeeDbContext.cs" />
-    <Compile Include="Migrations\201902262337078_StellarCoffee.cs" />
-    <Compile Include="Migrations\201902262337078_StellarCoffee.Designer.cs">
-      <DependentUpon>201902262337078_StellarCoffee.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201902282221068_AddressFieldInClients.cs" />
-    <Compile Include="Migrations\201902282221068_AddressFieldInClients.Designer.cs">
-      <DependentUpon>201902282221068_AddressFieldInClients.cs</DependentUpon>
+    <Compile Include="Migrations\201903072155070_StellarCoffee.cs" />
+    <Compile Include="Migrations\201903072155070_StellarCoffee.Designer.cs">
+      <DependentUpon>201903072155070_StellarCoffee.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repositories\Entities\ClientRepository.cs" />
@@ -73,11 +69,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201902262337078_StellarCoffee.resx">
-      <DependentUpon>201902262337078_StellarCoffee.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201902282221068_AddressFieldInClients.resx">
-      <DependentUpon>201902282221068_AddressFieldInClients.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201903072155070_StellarCoffee.resx">
+      <DependentUpon>201903072155070_StellarCoffee.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -15,6 +15,7 @@ namespace StellarCoffeeData.Migrations
                         Name = c.String(),
                         IdentityCardNumber = c.String(),
                         RNC = c.String(),
+                        Address = c.String(),
                         Status = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
