@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:StellarCoffeeDesktop"
         mc:Ignorable="d"
         Title="ClientsForm"
-        Height="540" 
+        Height="550" 
         Width="300"
         WindowStartupLocation="CenterScreen"
         Background="#333333"
