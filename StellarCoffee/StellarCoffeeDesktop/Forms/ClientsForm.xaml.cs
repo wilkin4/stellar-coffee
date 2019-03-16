@@ -3,6 +3,7 @@ using StellarCoffeeData.Repositories.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -24,11 +25,28 @@ namespace StellarCoffeeDesktop.Forms
         public ClientsForm()
         {
             InitializeComponent();
+
+            ReceiptTypeRepository receiptTypeRepository = new ReceiptTypeRepository();
+            Expression<Func<ReceiptType, bool>> predicate = rt => rt.Status == true;
+            IEnumerable<ReceiptType> receiptTypes = receiptTypeRepository.GetAll(predicate);
+
+            foreach(ReceiptType receiptType in receiptTypes)
+            {
+                ComboBoxItem comboBoxItem = new ComboBoxItem();
+                comboBoxItem.Content = receiptType.Name;
+                comboBoxItem.DataContext = receiptType;
+
+                ReceiptTypes.Items.Add(comboBoxItem);
+            }
         }
 
         private void SaveClientButtonClick(object sender, RoutedEventArgs e)
         {
+            ComboBoxItem selectedReceiptType = ReceiptTypes.SelectedItem as ComboBoxItem;
+            ReceiptType receiptType = selectedReceiptType.DataContext as ReceiptType;
+
             Client client = new Client();
+            client.ReceiptTypeId = receiptType.Id;
             client.Name = Name.Text;
             client.IdentityCardNumber = IdentityCardNumber.Text;
             client.RNC = RNC.Text;

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:StellarCoffeeDesktop"
         mc:Ignorable="d"
         Title="ClientsForm"
-        Height="490" 
+        Height="540" 
         Width="300"
         WindowStartupLocation="CenterScreen"
         Background="#333333"
@@ -99,6 +99,27 @@
                     Foreground="#ffffff"
                     Margin="0 0 0 15"
                 />
+
+                <Label 
+                    Padding="0"
+                    Foreground="#888888"
+                    Margin="0 0 0 5"
+                >
+                    Tipo de comprobante fiscal
+                </Label>
+
+                <ComboBox
+                    Name="ReceiptTypes"
+                    Height="30"
+                    VerticalContentAlignment="Center"
+                    Background="#444444"
+                    BorderThickness="0"
+                    Padding="5 0 5 0"
+                    Foreground="#000000"
+                    Margin="0 0 0 15"    
+                >
+                    <ComboBoxItem IsSelected="True">Seleccione</ComboBoxItem>
+                </ComboBox>
 
                 <Label 
                     Padding="0"
