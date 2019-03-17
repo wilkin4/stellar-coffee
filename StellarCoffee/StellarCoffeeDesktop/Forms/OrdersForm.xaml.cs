@@ -36,6 +36,43 @@ namespace StellarCoffeeDesktop.Forms
 
             ReceiptType.Text = client.ReceiptType.Name;
             NCF.Text = ncf;
+
+            foreach(Product product in products)
+            {
+                Products.Items.Add($"{product.Name} - RD$ {product.Price}");
+            }
+
+            float itbisTotal = _ITBISTotal(products);
+            float noITBISTotal = _NoITBISTotal(products);
+            float total = noITBISTotal + itbisTotal;
+
+            ITBISTotal.Text = $"RD$ {itbisTotal}";
+            NoITBISTotal.Text = $"RD$ {noITBISTotal}";
+            Total.Text = $"RD$ {total}";
+        }
+
+        private float _ITBISTotal(List<Product> products)
+        {
+            float total = 0;
+
+            foreach (Product product in products)
+            {
+                total += product.ITBIS;
+            }
+
+            return total;
+        }
+
+        private float _NoITBISTotal(List<Product> products)
+        {
+            float total = 0;
+
+            foreach(Product product in products)
+            {
+                total += product.Price;
+            }
+
+            return total;
         }
     }
 }

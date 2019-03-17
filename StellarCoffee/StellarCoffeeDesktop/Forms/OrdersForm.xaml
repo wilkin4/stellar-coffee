@@ -8,8 +8,8 @@
         Title="OrdersForm" 
         WindowStartupLocation="CenterScreen"
         Background="#333333"
-        Height="550" 
-        Width="400"
+        Height="830" 
+        Width="500"
 >       
     <Grid>
 
@@ -105,6 +105,85 @@
 
                 <TextBox 
                     Name="NCF"
+                    Height="30"
+                    VerticalContentAlignment="Center"
+                    Background="#444444"
+                    BorderThickness="0"
+                    BorderBrush="red"
+                    Padding="5 0 5 0"
+                    Foreground="#aaaaaa"
+                    Margin="0 0 0 15"
+                    IsReadOnly="True"
+                />
+
+                <ScrollViewer
+                    Height="200"
+                    MaxHeight="200"
+                    Margin="0 15 0 0"
+                    Padding="10"
+                    Background="#444444"
+                >
+                    <ItemsControl
+                        Name="Products"
+                        Foreground="#aaaaaa"
+                        FontSize="15"
+                    >
+                        
+                    </ItemsControl>
+                </ScrollViewer>
+
+                <Label 
+                    Padding="0"
+                    Foreground="#888888"
+                    Margin="0 15 0 5"
+                >
+                    Total de ITBIS
+                </Label>
+
+                <TextBox 
+                    Name="ITBISTotal"
+                    Height="30"
+                    VerticalContentAlignment="Center"
+                    Background="#444444"
+                    BorderThickness="0"
+                    BorderBrush="red"
+                    Padding="5 0 5 0"
+                    Foreground="#aaaaaa"
+                    Margin="0 0 0 15"
+                    IsReadOnly="True"
+                />
+
+                <Label 
+                    Padding="0"
+                    Foreground="#888888"
+                    Margin="0 0 0 5"
+                >
+                    Total sin ITBIS
+                </Label>
+
+                <TextBox 
+                    Name="NoITBISTotal"
+                    Height="30"
+                    VerticalContentAlignment="Center"
+                    Background="#444444"
+                    BorderThickness="0"
+                    BorderBrush="red"
+                    Padding="5 0 5 0"
+                    Foreground="#aaaaaa"
+                    Margin="0 0 0 15"
+                    IsReadOnly="True"
+                />
+
+                <Label 
+                    Padding="0"
+                    Foreground="#888888"
+                    Margin="0 0 0 5"
+                >
+                    Total
+                </Label>
+
+                <TextBox 
+                    Name="Total"
                     Height="30"
                     VerticalContentAlignment="Center"
                     Background="#444444"
