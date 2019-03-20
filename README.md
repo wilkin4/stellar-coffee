@@ -1,6 +1,6 @@
 # Stellar Coffee
 
-This is a desktop application to manage a coffee shop created with C# and Microsoft SQL Server. This application was made using Visual Studio 2017 Community.
+This is a desktop application to manage a coffee shop created with WPF, C# and Microsoft SQL Server. This application was made using Visual Studio 2017 Community.
 
 ## Instructions
 
