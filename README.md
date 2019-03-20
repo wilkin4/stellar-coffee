@@ -6,7 +6,7 @@ This is a desktop application to manage a coffee shop created with C# and Micros
 
 #### Connection string
 
-In StellarCoffeeDesktop/App.config you configure the connection string to connect to the database with the corresponding server ip, database name, database user and password.
+In StellarCoffeeDesktop/App.config you configure the connection string to connect to the database with the corresponding server ip, database name, database user and database password.
 
     <connectionStrings>
       <add
