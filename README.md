@@ -25,4 +25,3 @@ In Package Manager Console run the followings commands:
 ##### add-migrations \<migration name\> -StartUpProjectName \<startup project name\>
   
 ##### update-database -StartUpProjectName \<startup project name\> -verbose
-

@@ -5,9 +5,91 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StellarCoffeeDesktop"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
-        Background="#444444">
+        Title="MainWindow" 
+        Height="450" 
+        Width="300"
+        WindowStartupLocation="CenterScreen"
+        Background="#333333"
+>
     <Grid>
+        <ItemsControl
+            Grid.Column="0"
+            Grid.Row="0"
+            Background="#252525" 
+            Padding="20"
+        >
+            <Image 
+                Source="Images/StellarCoffee.png" 
+                VerticalAlignment="Center" 
+                Height="100"
+            />
+        </ItemsControl>
         
+        <StackPanel
+            Grid.Column="0"
+            Grid.Row="1"
+        >
+            <ItemsControl 
+                Padding="30 0 30 0"
+                Margin="0 30 0 0"
+            >
+                <Label 
+                    Padding="0"
+                    Foreground="#888888"
+                    Margin="0 0 0 5"
+                >
+                    Usuario
+                </Label>
+
+                <TextBox 
+                    Name="Username"
+                    Height="30"
+                    VerticalContentAlignment="Center"
+                    Background="#444444"
+                    BorderThickness="0"
+                    BorderBrush="red"
+                    Padding="5 0 5 0"
+                    Foreground="#ffffff"
+                    Margin="0 0 0 15"
+                />
+
+                <Label 
+                    Padding="0"
+                    Foreground="#888888"
+                    Margin="0 0 0 5"
+                >
+                    Contraseña
+                </Label>
+
+                <PasswordBox 
+                    Name="Password"
+                    Height="30"
+                    VerticalContentAlignment="Center"
+                    Background="#444444"
+                    BorderThickness="0"
+                    Padding="5 0 5 0"
+                    Foreground="#ffffff"
+                />
+
+                <Button 
+                    Content="INGRESAR"
+                    Height="35"
+                    Margin="0 30 0 0"
+                    Click="LoginButtonClick"
+                    BorderThickness="0"
+                    Foreground="#ffffff"
+                    Style="{StaticResource LoginButton}" 
+                />
+            </ItemsControl>
+        </StackPanel>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
     </Grid>
 </Window>

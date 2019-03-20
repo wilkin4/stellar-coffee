@@ -1,0 +1,365 @@
+﻿<Window x:Class="StellarCoffeeDesktop.HomeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StellarCoffeeDesktop"
+        mc:Ignorable="d"
+        Title="HomeWindow" 
+        Height="800" 
+        Width="1200"
+        WindowStartupLocation="CenterScreen"
+        Background="#444444"
+>
+
+    <Grid>
+        <DockPanel LastChildFill="True">
+            
+            <!--==========-->
+            <!--TOP-->
+            <!--==========-->
+
+            <TextBlock
+                DockPanel.Dock="Top"
+                Name="UserName"
+                Background="#333333"
+                Height="25"
+                Foreground="#ffffff"
+                FontSize="12"
+                TextAlignment="Right"
+                Padding="0 4 10 0"
+                FontWeight="Light"
+            >
+                Texto prueba
+            </TextBlock>
+
+            <StackPanel
+                DockPanel.Dock="Bottom"
+                Background="#b16801"
+                Height="20"
+            >
+
+            </StackPanel>
+
+            <Grid>
+
+                <!--==========-->
+                <!--LEFT 1-->
+                <!--==========-->
+                
+                <StackPanel
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    DockPanel.Dock="Left"
+                    Background="#222222"
+                >
+                    <Button 
+                        Click="CreateOrderButtonClick"
+                        Style="{StaticResource HomeMenuButton}"
+                    >
+                        <StackPanel
+                            Orientation="Horizontal"
+                        >
+                            <Image 
+                                Source="Images/shopping-list.png" 
+                                Height="12"
+                                Width="12"
+                            />
+
+                            <TextBlock
+                                Margin="5 0 0 0"
+                            >
+                                Crear pedido
+                            </TextBlock>
+                        </StackPanel>
+                    </Button>
+                    
+                    <Button 
+                        Style="{StaticResource HomeMenuButton}"
+                        Click="ClientsButtonClick"
+                    >
+                        <StackPanel
+                            Orientation="Horizontal"
+                        >
+                            <Image 
+                                Source="Images/plus.png" 
+                                Height="12"
+                                Width="12"
+                            />
+
+                            <TextBlock
+                                Margin="5 0 0 0"
+                            >
+                                Nuevo cliente
+                            </TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <Button 
+                        Style="{StaticResource HomeMenuButton}"
+                        Click="ProductsButtonClick"
+                    >
+                        <StackPanel
+                            Orientation="Horizontal"
+                        >
+                            <Image 
+                                Source="Images/plus.png" 
+                                Height="12"
+                                Width="12"
+                            />
+
+                            <TextBlock
+                                Margin="5 0 0 0"
+                            >
+                                Nuevo producto
+                            </TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <Button 
+                        Style="{StaticResource HomeMenuButton}"
+                        Click="ConfigurationsButtonClick"
+                    >
+                        <StackPanel
+                            Orientation="Horizontal"
+                        >
+                            <Image 
+                                Source="Images/configuration.png" 
+                                Height="12"
+                                Width="12"
+                            />
+
+                            <TextBlock
+                                Margin="5 0 0 0"
+                            >
+                                Configuraciones
+                            </TextBlock>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+
+                <!--==========-->
+                <!--LEFT 2-->
+                <!--==========-->
+
+                <StackPanel
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    DockPanel.Dock="Left"
+                >
+                    <Grid
+                        Height="{Binding Path=ActualHeight, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}}}"    
+                    >
+                        <StackPanel
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            Orientation="Vertical"  
+                            Background="#3c3c3c"
+                        >
+                            <ItemsControl
+                                Grid.Column="0"
+                                Grid.Row="0"
+                                Background="#252525" 
+                                Padding="15"
+                                Foreground="#ffffff"
+                            >
+                                <Label 
+                                    Padding="0"
+                                    Foreground="#888888"
+                                    Margin="0 0 0 5"
+                                    HorizontalContentAlignment="Center"
+                                    FontWeight="Bold"
+                                    FontSize="16"
+                                >
+                                    Productos
+                                </Label>
+                            </ItemsControl>
+
+
+                            <ItemsControl
+                                Width="{Binding Path=ActualWidth, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type StackPanel}}}"    
+                                Padding="20"
+                            >
+                                <Grid
+                                >
+                                    <TextBox
+                                        Grid.Column="0"
+                                        Grid.Row="0"
+                                        Height="30"
+                                        Name="ProductStringSearch"
+                                        VerticalContentAlignment="Center"
+                                        Background="#666666"
+                                        BorderThickness="0"
+                                        BorderBrush="red"
+                                        Padding="5 0 5 0"
+                                        Foreground="#ffffff"
+                                    />
+
+                                    <Button 
+                                        Grid.Column="1"
+                                        Grid.Row="0"
+                                        Content="BUSCAR"
+                                        Height="30"
+                                        BorderThickness="0"
+                                        Foreground="#ffffff"
+                                        Click="SearchProductsButtonClick"
+                                        Style="{StaticResource LoginButton}" 
+                                    />
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="7*" />
+                                        <ColumnDefinition Width="3*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                </Grid>
+                            </ItemsControl>
+                        </StackPanel>
+
+                        <ListBox
+                            Name="Products"
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            SelectionMode="Multiple"
+                            ScrollViewer.VerticalScrollBarVisibility="Visible"
+                            Background="#333333"
+                            Foreground="#888888"
+                            FontWeight="Bold"
+                            FontSize="12"
+                            Padding="5"
+                            BorderThickness="0"
+                        >
+
+                        </ListBox>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                    </Grid>
+                </StackPanel>
+
+                <!--==========-->
+                <!--RIGHT-->
+                <!--==========-->
+
+                <StackPanel
+                    Grid.Column="2"
+                    Grid.Row="0"
+                    DockPanel.Dock="Right"
+                    Background="#292929"
+                >
+                    <Grid
+                        Height="{Binding Path=ActualHeight, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}}}"    
+                    >
+                        <StackPanel
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            Orientation="Vertical"  
+                        >
+                            <ItemsControl
+                                Grid.Column="0"
+                                Grid.Row="0"
+                                Background="#252525" 
+                                Padding="15"
+                                Foreground="#ffffff"
+                            >
+                                <Label 
+                                    Padding="0"
+                                    Foreground="#888888"
+                                    Margin="0 0 0 5"
+                                    HorizontalContentAlignment="Center"
+                                    FontWeight="Bold"
+                                    FontSize="16"
+                                >
+                                    Clientes
+                                </Label>
+                            </ItemsControl>
+
+                            <ItemsControl
+                                Width="{Binding Path=ActualWidth, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type StackPanel}}}"    
+                                Padding="20"
+                            >
+                                <Grid
+                                >       
+                                    <TextBox
+                                        Grid.Column="0"
+                                        Grid.Row="0"
+                                        Height="30"
+                                        Name="ClientStringSearch"
+                                        VerticalContentAlignment="Center"
+                                        Background="#666666"
+                                        BorderThickness="0"
+                                        BorderBrush="red"
+                                        Padding="5 0 5 0"
+                                        Foreground="#ffffff"
+                                    />
+
+                                    <Button 
+                                        Grid.Column="1"
+                                        Grid.Row="0"
+                                        Content="BUSCAR"
+                                        Height="30"
+                                        BorderThickness="0"
+                                        Foreground="#ffffff"
+                                        Click="SearchClientsButtonClick"
+                                        Style="{StaticResource LoginButton}" 
+                                    />
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="7*" />
+                                        <ColumnDefinition Width="3*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                </Grid>
+                            </ItemsControl>
+                        </StackPanel>
+
+                        <ListBox
+                            Name="Clients"
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            ScrollViewer.VerticalScrollBarVisibility="Visible"
+                            Background="#333333"
+                            Foreground="#888888"
+                            FontWeight="Bold"
+                            FontSize="12"
+                            Padding="5"
+                            BorderThickness="0"
+                        >
+                       
+                        </ListBox>
+                    
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                    </Grid>
+                </StackPanel>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.5*"/>
+                    <ColumnDefinition Width="4.25*"/>
+                    <ColumnDefinition Width="4.25*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+            </Grid>
+        </DockPanel>
+    </Grid>
+</Window>

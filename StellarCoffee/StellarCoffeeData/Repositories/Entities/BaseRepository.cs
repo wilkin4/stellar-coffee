@@ -12,17 +12,17 @@ namespace StellarCoffeeData.Repositories
 {
     public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class
     {
-        private readonly StellarCoffeeDbContext _context;
+        protected readonly StellarCoffeeDbContext Context;
 
         public BaseRepository()
         {
-            _context = new StellarCoffeeDbContext();
+            Context = new StellarCoffeeDbContext();
         }
 
         public int Create(TEntity entity)
         {
-            _context.Set<TEntity>().Add(entity);
-            _context.SaveChanges();
+            Context.Set<TEntity>().Add(entity);
+            Context.SaveChanges();
 
             PropertyInfo propertyInfo = entity.GetType().GetProperty("Id");
             int entityId = (int)propertyInfo.GetValue(entity);
@@ -32,7 +32,7 @@ namespace StellarCoffeeData.Repositories
 
         public void Delete(int id)
         {
-            TEntity entity = _context.Set<TEntity>().Find(id);
+            TEntity entity = Context.Set<TEntity>().Find(id);
 
             PropertyInfo propertyInfo = entity.GetType().GetProperty("Status");
 
@@ -40,27 +40,27 @@ namespace StellarCoffeeData.Repositories
 
             propertyInfo.SetValue(entity, false);
 
-            _context.SaveChanges();
+            Context.SaveChanges();
         }
 
         public TEntity Get(Expression<Func<TEntity, bool>> predicate)
         {
-            return _context.Set<TEntity>().AsNoTracking().Where(predicate).FirstOrDefault();
+            return Context.Set<TEntity>().AsNoTracking().Where(predicate).FirstOrDefault();
         }
 
         public IEnumerable<TEntity> GetAll(Expression<Func<TEntity, bool>> predicate)
         {
-            return _context.Set<TEntity>().ToList();
+            return Context.Set<TEntity>().ToList();
         }
 
         public void Update(TEntity entity)
         {
             int id = (int)entity.GetType().GetProperty("Id").GetValue(entity);
 
-            TEntity actualEntity = _context.Set<TEntity>().Find(id);
+            TEntity actualEntity = Context.Set<TEntity>().Find(id);
 
-            _context.Entry(actualEntity).CurrentValues.SetValues(entity);
-            _context.SaveChanges();
+            Context.Entry(actualEntity).CurrentValues.SetValues(entity);
+            Context.SaveChanges();
         }
     }
 }

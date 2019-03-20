@@ -49,11 +49,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\StellarCoffeeDbContext.cs" />
-    <Compile Include="Migrations\201902252202038_StellarCoffee.cs" />
-    <Compile Include="Migrations\201902252202038_StellarCoffee.Designer.cs">
-      <DependentUpon>201902252202038_StellarCoffee.cs</DependentUpon>
+    <Compile Include="Migrations\201903101622157_FirstCreation.cs" />
+    <Compile Include="Migrations\201903101622157_FirstCreation.Designer.cs">
+      <DependentUpon>201903101622157_FirstCreation.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\ReceiptType.cs" />
+    <Compile Include="Repositories\Entities\ClientRepository.cs" />
+    <Compile Include="Repositories\Entities\ReceiptTypeRepository.cs" />
+    <Compile Include="Repositories\Entities\UserRepository.cs" />
     <Compile Include="SQL\SqlStrings.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Product.cs" />
@@ -64,12 +68,11 @@
     <Compile Include="Repositories\Interfaces\IBaseRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201902252202038_StellarCoffee.resx">
-      <DependentUpon>201902252202038_StellarCoffee.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201903101622157_FirstCreation.resx">
+      <DependentUpon>201903101622157_FirstCreation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
