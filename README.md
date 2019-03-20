@@ -6,7 +6,7 @@ This is a desktop application to manage a coffee shop created with C# and Micros
 
 #### Connection string
 
-In StellarCoffeeDesktop/App.config you configure the connection string to connect to the database, in the section:
+In StellarCoffeeDesktop/App.config you configure the connection string to connect to the database with the corresponding server ip, database name, database user and password in the section:
 
     <connectionStrings>
       <add
@@ -18,7 +18,7 @@ In StellarCoffeeDesktop/App.config you configure the connection string to connec
 
 #### Running migrations
 
-In Package Manager Console run the followings commands:
+In Package Manager Console run the followings commands with the corresponding migration name and startup project name:
 
 ##### enable-migrations
 
