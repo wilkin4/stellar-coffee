@@ -49,9 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\StellarCoffeeDbContext.cs" />
-    <Compile Include="Migrations\201903101622157_FirstCreation.cs" />
-    <Compile Include="Migrations\201903101622157_FirstCreation.Designer.cs">
-      <DependentUpon>201903101622157_FirstCreation.cs</DependentUpon>
+    <Compile Include="Migrations\201903211341150_FirstMigration.cs" />
+    <Compile Include="Migrations\201903211341150_FirstMigration.Designer.cs">
+      <DependentUpon>201903211341150_FirstMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ReceiptType.cs" />
@@ -71,8 +71,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201903101622157_FirstCreation.resx">
-      <DependentUpon>201903101622157_FirstCreation.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201903211341150_FirstMigration.resx">
+      <DependentUpon>201903211341150_FirstMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
