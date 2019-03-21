@@ -22,6 +22,6 @@ In Package Manager Console run the followings commands with the corresponding mi
 
 ##### enable-migrations
 
-##### add-migrations \<migration name\> -StartUpProjectName \<startup project name\>
+##### add-migration \<migration name\> -StartUpProjectName \<startup project name\>
   
 ##### update-database -StartUpProjectName \<startup project name\> -verbose
