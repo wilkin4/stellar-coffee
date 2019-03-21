@@ -8,7 +8,7 @@
         Title="OrdersForm" 
         WindowStartupLocation="CenterScreen"
         Background="#333333"
-        Height="830" 
+        Height="730" 
         Width="500"
 >       
     <Grid>
@@ -117,8 +117,8 @@
                 />
 
                 <ScrollViewer
-                    Height="200"
-                    MaxHeight="200"
+                    Height="100"
+                    MaxHeight="100"
                     Margin="0 15 0 0"
                     Padding="10"
                     Background="#444444"

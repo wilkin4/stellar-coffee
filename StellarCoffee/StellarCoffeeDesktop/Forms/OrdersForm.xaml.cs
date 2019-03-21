@@ -43,6 +43,12 @@ namespace StellarCoffeeDesktop.Forms
             }
 
             float itbisTotal = _ITBISTotal(products);
+
+            if (client.ReceiptTypeId == 5)
+            {
+                itbisTotal = 0;
+            }
+
             float noITBISTotal = _NoITBISTotal(products);
             float total = noITBISTotal + itbisTotal;
 
